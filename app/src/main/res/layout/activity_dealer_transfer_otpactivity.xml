@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".dealer.DealerTransferOTPActivity"
+    android:background="@color/white">
+
+    <!-- TOP BAR -->
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Withdraw Money"
+            android:textColor="@color/red_color"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/hurilogo" />
+
+    </LinearLayout>
+
+    <!-- CONTENT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please enter the OTP received to\nvalidate mobile number"
+            android:textColor="@color/blue_gray_text_color"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="14sp" />
+
+        <!-- OTP BOXES -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/border_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/border_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/border_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/border_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- RESEND -->
+
+        <TextView
+            android:id="@+id/txtResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Resend Code"
+            android:textColor="@color/red_color"
+            android:fontFamily="@font/montserrat_medium" />
+
+        <!-- BUTTON -->
+
+        <TextView
+            android:id="@+id/btnProceed"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="@string/make_payment"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_medium"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

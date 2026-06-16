@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+
+    tools:context=".dealer.WithdrawMoneyDetailsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/jbcskd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_26sdp">
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Back"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/deposit_money"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/_20ssp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/wakati" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jbcskd"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/full_name"
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/_18ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/phone_number"
+                android:fontFamily="@font/montserrat_regular"
+
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/_8ssp"
+                android:text="2697676767"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/id_number"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/idNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/_8ssp"
+                android:text="ABC12345678"
+                android:fontFamily="@font/montserrat_regular"
+
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/idcard" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_1"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/proceed"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/proceed"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/banner" />
+
+
+</RelativeLayout>

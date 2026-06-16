@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Download Statement"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_33sdp"
+        android:orientation="horizontal"
+
+        android:padding="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/etFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:fontFamily="@font/montserrat_regular"
+            android:focusable="false"
+            android:hint="From Date"
+            android:paddingLeft="@dimen/_5sdp" />
+
+        <EditText
+            android:id="@+id/etToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:fontFamily="@font/montserrat_regular"
+            android:focusable="false"
+            android:hint="To Date"
+            android:paddingLeft="@dimen/_5sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_70sdp"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/button_bg"
+        android:text="Download"
+        android:textColor="@color/white_color"
+        android:fontFamily="@font/montserrat_medium"/>
+
+</LinearLayout>

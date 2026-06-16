@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.wakati_kotlin"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">
+            @android:color/transparent
+        </item>
+
+        <item name="android:windowLightStatusBar">
+            true
+        </item>
+
+    </style>
+
+    <style name="Theme.wakati_kotlin"
+        parent="Base.Theme.wakati_kotlin" />
+
+</resources>

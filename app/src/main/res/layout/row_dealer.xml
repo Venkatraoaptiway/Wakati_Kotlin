@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+   android:layout_margin="@dimen/_10sdp"
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/user" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/darkgray_color"
+            android:layout_gravity="center_vertical"
+            android:text="User name"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@color/green_color"
+                android:text="@string/active" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#E5E5E5" />
+
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/hurimoney"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.wakati_kotlin"
+        tools:targetApi="31">
+        <activity
+            android:name=".reciever.UsersDetailsCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.CreateAccountDocumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.CreateAccountOtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reciever.DealersTotalListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.ResetPinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.DealerTransferOTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.WithdrawMoneyAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.WithdrawMoneyDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.WithdrawMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".agent.AgentHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".partnerAgent.PartnerAgentHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".superDealer.SuperDealerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reciever.RecieverHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.TransactionsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.CustomerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".frontdesk.FrontdeskHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.ForgotPasswordOtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.DepositeMoneyDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.DepositeMoneyAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.DepositeMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dealer.DealerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.LoginPinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

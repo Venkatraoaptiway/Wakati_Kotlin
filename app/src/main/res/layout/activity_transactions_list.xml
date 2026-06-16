@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white_color"
+    android:layout_height="match_parent"
+    tools:context=".customer.TransactionsListActivity">
+
+    <RelativeLayout
+        android:id="@+id/tvRecentTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/transactions"
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/montserrat_bold"/>
+        <TextView
+            android:id="@+id/statements_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="@string/download_statement"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+    </RelativeLayout>
+
+
+
+
+
+    <!-- SEARCH BAR -->
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/tvRecentTransactions"
+        android:background="@drawable/search_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <!-- SEARCH ICON -->
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/search_icon"
+            app:tint="#7A7A7A" />
+
+        <!-- EDIT TEXT -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:hint="Search by name or number"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#8A8A8A"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_medium" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/transactionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchLayout"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <!-- Transaction 1 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransferHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

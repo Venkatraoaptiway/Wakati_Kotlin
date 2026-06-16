@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".dealer.WithdrawMoneyAccountActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TOP BAR -->
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Deposit Money"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/_17ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:visibility="gone"
+                android:src="@drawable/hurilogo" />
+
+        </LinearLayout>
+
+        <!-- TITLE -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topLayout"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Enter the Amount"
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/_18ssp" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Enter the amount that is to be deposited"
+            android:textColor="@color/blue_gray_text_color"
+            android:textSize="@dimen/_12ssp" />
+
+        <!-- AMOUNT -->
+
+        <TextView
+            android:id="@+id/amountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subTitle"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@id/amountLabel"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/edit_bg"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Enter Amount"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <LinearLayout
+            android:id="@+id/openingBalanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/amount"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <!-- OPENING BALANCE -->
+
+            <TextView
+                android:id="@+id/openingBalanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Opening Balance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/openingBalance"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_below="@id/openingBalanceLabel"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/edit_bg"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="Enter Opening Balance"
+                android:inputType="numberDecimal"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+        </LinearLayout>
+
+        <!-- MESSAGE -->
+
+        <TextView
+            android:id="@+id/messageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/openingBalanceLayout"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@id/messageLabel"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/edit_bg"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Message"
+            android:paddingStart="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <!-- PROCEED BUTTON -->
+
+        <TextView
+            android:id="@+id/proceed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@id/message"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/button_bg"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

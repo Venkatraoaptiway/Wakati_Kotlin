@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:fillViewport="true"
+    android:fitsSystemWindows="false"
+    tools:context=".superDealer.SuperDealerHomeActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Top bar -->
+            <RelativeLayout
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@drawable/top_bar"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/back_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/welcome_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_toEndOf="@id/profile_image"
+                            android:text="@string/welcome"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/welcome_text"
+                            android:layout_alignStart="@id/welcome_text"
+                            android:text="@string/zanele_okonkwo"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/montserrat_bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Language and notification icon -->
+                <ImageView
+                    android:id="@+id/notification_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:src="@drawable/baseline_circle_notifications_24" />
+
+                <!-- Language and notification icon -->
+                <ImageView
+                    android:id="@+id/logout_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/outline_arrow_circle_right_24" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/account_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_bar"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_minus40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/home_card_bg"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/payment_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/wallet" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Payment Dashboard"
+                                android:textColor="#062A5A"
+                                android:textSize="@dimen/_17ssp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="as on 29 Oct 2025, 04:29pm"
+                                android:textColor="#666666"
+                                android:textSize="@dimen/_9ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/baseline_calendar_month_24" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/payment_dashboard"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/wallet_balance"
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/wallet_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="O KMF"
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_14ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="@string/cash_balance"
+                                android:textColor="@color/blue_color"
+
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/available_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="O KMF"
+
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_14ssp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/transations_with"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:text="@string/transactions_with_dealers"
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cash_collected_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="@string/cash_collected"
+
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/cash_collected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="O KMF"
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_14ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cash_distributed_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/cash_distributed"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:textColor="@color/blue_gray_text_color"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/cash_distributed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="O KMF"
+
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_14ssp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/btnNext"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/account_card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:src="@drawable/baseline_arrow_forward_24" />
+
+
+            <LinearLayout
+                android:id="@+id/tvRecentTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnNext"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/latest_activity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/view_transition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:text="@string/view_transactions"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:textColor="@color/red_color"
+                    android:textSize="@dimen/_11ssp" />
+                />
+
+            </LinearLayout>
+
+
+            <!-- SEARCH BAR -->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvRecentTransactions">
+
+
+                <LinearLayout
+                    android:id="@+id/transactionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <!-- Transaction 1 -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTransferHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

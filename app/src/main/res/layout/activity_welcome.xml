@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.WelcomeActivity">
+
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+
+        android:src="@drawable/hurilogo" />
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoImage"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:maxLines="3"
+        android:text="@string/experience_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:padding="@dimen/_13sdp"
+        android:text="@string/let_s_get_started"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-2dp"
+        android:src="@drawable/welcomelines" />
+
+
+</RelativeLayout>
