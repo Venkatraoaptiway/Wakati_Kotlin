@@ -17,6 +17,9 @@
         android:theme="@style/Theme.wakati_kotlin"
         tools:targetApi="31">
         <activity
+            android:name=".agent.UpdateListActivity"
+            android:exported="false" />
+        <activity
             android:name=".reciever.UsersDetailsCardActivity"
             android:exported="false" />
         <activity

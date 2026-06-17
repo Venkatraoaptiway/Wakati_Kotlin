@@ -11,6 +11,8 @@ import com.example.wakati_kotlin.model.LoginResponse
 import com.example.wakati_kotlin.utils.LoaderUtils
 import com.example.wakati_kotlin.utils.StatusBarUtils
 import com.example.wakati_kotlin.databinding.ActivityLoginBinding
+import com.example.wakati_kotlin.utils.GlobalToast
+import com.example.wakati_kotlin.utils.ToastType
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -80,6 +82,8 @@ class LoginActivity : AppCompatActivity() {
                         apply()
                     }
 
+                    GlobalToast.show(this@LoginActivity,"Login Successfull",ToastType.SUCCESS);
+
                     val intent = Intent(this@LoginActivity, LoginPinActivity::class.java)
 
                     intent.putExtra("phone_number", binding.editTextPhone.text.toString())
@@ -88,9 +92,12 @@ class LoginActivity : AppCompatActivity() {
 
                     startActivity(intent)
 
-                    Toast.makeText(this@LoginActivity, "Login success", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@LoginActivity, "Login success", Toast.LENGTH_SHORT).show()
+
                 } else {
-                    Toast.makeText(this@LoginActivity, "Login failed ${response.message()}", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@LoginActivity, "Login failed ${response.message()}", Toast.LENGTH_SHORT).show()
+
+                    GlobalToast.show(this@LoginActivity,response.message(),ToastType.ERROR);
                 }
             }
 

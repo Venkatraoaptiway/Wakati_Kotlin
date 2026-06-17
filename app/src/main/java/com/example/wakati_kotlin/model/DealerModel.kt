@@ -9,6 +9,9 @@ data class DealerModel(
     val status: String?,
     val island: String?,
     val cash_balance: String?,
-    val assigned_dealers_count: Int?
+    val assigned_dealers_count: Int?,
+
+    val super_dealer_id: String?
+
 
 )

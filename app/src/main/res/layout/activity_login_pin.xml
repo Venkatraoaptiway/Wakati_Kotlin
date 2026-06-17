@@ -68,7 +68,7 @@
         android:text="@string/please_enter_the_pin"
         android:textColor="@color/red_color"
         android:textSize="@dimen/_16ssp"
-        android:textStyle="bold" />
+        />
 
     <TextView
         android:id="@+id/text"

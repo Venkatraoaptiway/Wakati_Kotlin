@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/assign"
+        android:background="@color/blue_color"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assign 1 Dealers"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="50dp"
+android:fontFamily="@font/montserrat_medium"
+        android:backgroundTint="@color/red_color"
+        android:text="Confirm"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/gray_color"
+        android:text="Cancel"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/red_color"/>
+</LinearLayout>

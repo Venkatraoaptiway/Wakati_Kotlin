@@ -129,8 +129,16 @@ class RecieverHomeActivity() : AppCompatActivity() {
 
             intent.putExtra("flag","Front_Desk_Flow");
             startActivity(intent)
-
         }
+
+
+        binding!!.assignDealersBtn.setOnClickListener {
+            val intent = Intent(this@RecieverHomeActivity, DealersTotalListActivity::class.java)
+
+            intent.putExtra("flag","Assign_Dealers_Flow");
+            startActivity(intent)
+        }
+
         binding!!.transactions.setOnClickListener {
             val intent = Intent(this@RecieverHomeActivity, TransactionsListActivity::class.java)
             startActivity(intent)

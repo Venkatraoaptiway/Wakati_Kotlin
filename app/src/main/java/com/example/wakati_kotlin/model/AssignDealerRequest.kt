@@ -1,4 +1,4 @@
-package com.example.wakati_kotlin.model;
+package com.example.wakati_kotlin.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -14,5 +14,5 @@ data class AssignDealerRequest(
     val dealerIds: ArrayList<String>,
 
     @SerializedName("action")
-    val action: String? = null
+    val action: String
 )

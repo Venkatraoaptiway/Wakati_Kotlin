@@ -130,6 +130,8 @@
                 >
 
 
+
+
                 <TextView
                     android:id="@+id/createAccount"
                     android:layout_width="match_parent"
@@ -140,10 +142,10 @@
                     android:background="@drawable/button_bg"
                     android:gravity="center"
                     android:padding="@dimen/_13sdp"
-                    android:text="@string/create_account"
+                    android:text="@string/create_new_account"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_13ssp"
-                    android:fontFamily="@font/montserrat_bold" />
+                    android:fontFamily="@font/montserrat_medium" />
 
                 <TextView
                     android:id="@+id/updateAccount"
@@ -152,13 +154,15 @@
                     android:layout_marginTop="@dimen/_18sdp"
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:layout_marginRight="@dimen/_20sdp"
-                    android:background="@drawable/button_bg"
+                    android:background="@drawable/edittext_bg1"
                     android:gravity="center"
                     android:padding="@dimen/_13sdp"
                     android:text="@string/update_account"
-                    android:textColor="@color/white"
+                    android:textColor="@color/red_color"
                     android:textSize="@dimen/_13ssp"
                     android:fontFamily="@font/montserrat_bold" />
+
+
 
 
             </LinearLayout>
@@ -173,86 +177,51 @@
                 android:layout_below="@id/layout_01"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="@dimen/_6sdp"
-                android:text="@string/latest_activity"
+                android:text="@string/recent_activity"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/montserrat_bold"/>
 
 
             <!-- SEARCH BAR -->
-            <LinearLayout
-                android:id="@+id/searchLayout"
+
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_below="@+id/tvRecentTransactions"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/search_bg"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRecentTransactions"
+                app:tabIndicatorColor="@color/red_color"
+                app:tabSelectedTextColor="@color/red_color"
+                android:background="@color/white_color"
+                app:tabTextColor="#95AAC6">
 
-                <!-- SEARCH ICON -->
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/search_icon"
-                    app:tint="#7A7A7A" />
-
-                <!-- EDIT TEXT -->
-                <EditText
-                    android:id="@+id/etSearch"
-                    android:layout_width="0dp"
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:hint="Search by name or number"
-                    android:inputType="text"
-                    android:textColor="#000000"
-                    android:textColorHint="#8A8A8A"
-                    />
 
-                <!-- FILTER ICON -->
-                <ImageView
-                    android:id="@+id/imgFilter"
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/filters"
-                    app:tint="#1E88E5" />
+                    android:text="All"/>
 
-            </LinearLayout>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active"/>
 
-            <ScrollView
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inactive"/>
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTransferHistory"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/searchLayout"
-                >
-
-
-
-                <LinearLayout
-                    android:id="@+id/transactionsLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="16dp">
-
-                    <!-- Transaction 1 -->
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvTransferHistory"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp" />
-
-
-                </LinearLayout>
-
-            </ScrollView>
-
+                android:layout_below="@id/tabLayout"
+                android:paddingHorizontal="16dp"/>
         </RelativeLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

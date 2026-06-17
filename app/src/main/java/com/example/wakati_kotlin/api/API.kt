@@ -1,9 +1,9 @@
 package com.example.wakati_kotlin.api
 
-import android.util.Log
+//import com.example.wakati_kotlin.model.AssignDealerRequest
 import com.example.wakati_kotlin.model.AssignDealerRequest
+import com.example.wakati_kotlin.model.BlockUserRequest
 import com.example.wakati_kotlin.model.DashboardResponse
-import com.example.wakati_kotlin.model.DealersResponse
 import com.example.wakati_kotlin.model.DepositRequest
 import com.example.wakati_kotlin.model.IslandsResponse
 import com.example.wakati_kotlin.model.LoginResponse
@@ -116,13 +116,26 @@ interface API {
 
 
     @POST("receiver_front_desk_list")
-    fun getFrontDesk(@Header("Authorization") token: String, @Query("user_id") userId: String
+    fun getFrontDesk(
+        @Header("Authorization") token: String, @Query("user_id") userId: String
     ): Call<UserListResponse>
 
 
-    @POST("assign_dealers")
-    fun assignDealers(@Header("Authorization") authToken: String, @Body body: AssignDealerRequest
+    @POST("update_user_status")
+    fun blockSuperDealer(
+        @Header("Authorization") token: String,
+        @Body body: BlockUserRequest
 
     ): Call<LoginResponse>
 
+
+    @POST("assign_dealers")
+    fun assignDealers(
+        @Header("Authorization") authToken: String,
+        @Body body: AssignDealerRequest
+    ): Call<LoginResponse>
+
 }
+
+
+

@@ -114,6 +114,13 @@ class PartnerAgentHomeActivity() : AppCompatActivity() {
 
         }
 
+        binding!!.assignDealersBtn.setOnClickListener {
+            val intent = Intent(this@PartnerAgentHomeActivity, DealersTotalListActivity::class.java)
+
+            intent.putExtra("flag","Assign_PA_Dealers_Flow");
+            startActivity(intent)
+        }
+
     }
 
     fun serviceProfile(authToken: String?, userId: String?) {

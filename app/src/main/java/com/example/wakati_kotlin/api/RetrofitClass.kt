@@ -1,7 +1,8 @@
 package com.example.wakati_kotlin.api
 
+import com.example.wakati_kotlin.model.AssignDealerRequest
+import com.example.wakati_kotlin.model.BlockUserRequest
 import com.example.wakati_kotlin.model.DashboardResponse
-import com.example.wakati_kotlin.model.DealersResponse
 import com.example.wakati_kotlin.model.DepositRequest
 import com.example.wakati_kotlin.model.IslandsResponse
 import com.example.wakati_kotlin.model.LoginResponse
@@ -197,6 +198,20 @@ class RetrofitClass(rootUrl: String) {
     fun getFrontDesk(cb: Callback<UserListResponse>, authToken: String, userId: String) {
         retrofit.create(API::class.java).getFrontDesk(authToken, userId).enqueue(cb)
     }
+
+
+
+
+
+    fun blockSuperDealer(cb: Callback<LoginResponse>, authToken: String, body: BlockUserRequest) {
+        retrofit.create(API::class.java).blockSuperDealer(authToken, body).enqueue(cb)
+    }
+
+
+    fun assignDealer(cb: Callback<LoginResponse>, authToken: String, body: AssignDealerRequest) {
+        retrofit.create(API::class.java).assignDealers(authToken, body).enqueue(cb)
+    }
+
 
 
 

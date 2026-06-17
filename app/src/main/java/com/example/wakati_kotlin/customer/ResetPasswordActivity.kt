@@ -25,9 +25,7 @@ class ResetPasswordActivity : AppCompatActivity() {
     var otpId: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityResetPasswordBinding.inflate(
-            layoutInflater
-        )
+        binding = ActivityResetPasswordBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
         StatusBarUtils.setStatusBar(this, true)
         userId = intent.getStringExtra("userId")
@@ -48,11 +46,7 @@ class ResetPasswordActivity : AppCompatActivity() {
 
             // PASSWORD LENGTH
             if (password.length < 6) {
-                Toast.makeText(
-                    this@ResetPasswordActivity,
-                    "Password must be minimum 6 characters",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@ResetPasswordActivity, "Password must be minimum 6 characters", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
@@ -92,11 +86,7 @@ class ResetPasswordActivity : AppCompatActivity() {
                 response: Response<LoginResponse?>
             ) {
                 val loginResponse = response.body()
-                Toast.makeText(
-                    this@ResetPasswordActivity,
-                    loginResponse!!.message,
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@ResetPasswordActivity, loginResponse!!.message, Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@ResetPasswordActivity, LoginActivity::class.java)
                 startActivity(intent)
             }
